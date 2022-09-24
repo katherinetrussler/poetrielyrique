@@ -1,10 +1,17 @@
 <html>
 <body>
-<p style="text-align:left";><What a beautiful world
-<p style="text-align:center"><img src="mmeow.jpeg"></p>
-<p style="text-align:center"><img src="mmeow.jpeg" width="50%">
-</p>
-<h2 style="background-color:mediumseagreen;"> Be kind to yourself, you deserve to be happy</h2>
-</body>
 
+<h1 style="background-color:SlateBlue;">Hello World</h1>
+
+<h2 style="background-color:mediumseagreen;"> Be kind to yourself, you deserve to be happy</h2>
+
+
+<p style="text-align:center; background-color:purple; color:yellow"> This is a sentence in blue.</p>
+<hr>
+<p style="background-color:Tomato;">
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+</p>
+
+</body>
 </html>
