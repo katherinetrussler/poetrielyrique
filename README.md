@@ -32,8 +32,6 @@
 <p style="background-color:magenta;color:yellow; text-align:left">
 Bla bla ginger, bla bla
 </p>
-<a href="https://www.ubc.ca/!></a>
-<pr>
-<a href="https://www.ubc.ca/"></a>
+<a href="https//startrek.com">Click me</a>
 </body>
 </html>
