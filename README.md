@@ -33,5 +33,24 @@
 Bla bla ginger, bla bla
 </p>
 <a href="https//startrek.com">Click me</a>
+
+<table>
+  <tr>
+    <th>Animals</th>
+    <th>Size</th>
+    <th>Do I like them?</th>
+  </tr>
+  <tr>
+    <td>Cats</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Dogs</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+  </tr>
+</table>
+
 </body>
 </html>
