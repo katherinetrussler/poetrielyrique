@@ -1,0 +1,23 @@
+<html>
+<head>
+<title> This is my lovely title </title>
+</head>
+<body>
+<script>
+var word = "";
+var texts = [];
+var letters = "abcdefghijklmnopqrstuvwxyz";
+var l = letters.length;
+var textsNum = 10;
+for (var v = 0; v < textsNum; v++) {
+  for (var i = 0; i < l; i++) {
+    word += letters[Math.floor(Math.random() * l)];
+  }
+  texts.push(word);
+  word = '';
+}
+</script>
+</body>
+</html>
+</body>
+</html>

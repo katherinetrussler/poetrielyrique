@@ -9,19 +9,15 @@
 <h2 style="background-color:silver; text-align:center; color:purple;"> To you that deserve the world</h2>
 <br>
 
+
+
+
+
 vfdub odgb
 pick a k value between 1 and 10
 encrypt your phrase
 give to partner, don't tell them k value
 parneter decripts
-
-<script>
-var findme=i;
-for (i=0; i<26; i++){
-  document.write(i+ "<br>");
-}
-</script>
-
 
 
 
