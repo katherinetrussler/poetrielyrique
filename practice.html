@@ -5,23 +5,18 @@
 </head>
 <body>
 <script>
-var alphabet = "abcdefghijklmnopqrstuvwxyz";
-var newalpha = "";
-function shift(n){
-	for (let i = 0; i < alphabet.length; i++){
-		let offset = (i + n) % alphabet.length;
-		newalpha += alphabet[offset];
-	}
-}
-function decode(message){
-    let result = "";
-    message = message.toLowerCase();
-    for (let i = 0; i < message.length; i++){
-        let index = newalpha.indexOf(message[i]);
-        result += alphabet[index];
+	for (i=1; i<=5; i++){
+        console.log((i)+"bla balba");
     }
-    return result;
-}
+    
+    
+    
+    
+    //if (i%2!== 0) console.log(i);
+    //this displays odd numbers
+    //Number.isInteger() + "<br>");
+
+	
 </script>
 </body>
 </html>
