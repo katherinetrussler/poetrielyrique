@@ -1,0 +1,20 @@
+<html>
+<head></head>
+<body>
+    <script>
+        var rnum = Math.floor(125 + Math.random() * 376);
+        document.write("Every 3rd number from 0 to " + rnum + " is");
+        document.write("<br>");
+        var savedArray = new Array();
+        var inc = 0;
+        for (var i = 0; inc <= rnum; i++) {
+            savedArray[i] = inc;
+            inc += 3;
+        }
+        for (var j = 0; j < savedArray.length; j++) {
+            document.write(savedArray[j] + ", ");
+        }
+    </script>
+    
+</body>
+</html>
