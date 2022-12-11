@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <script>
+            var age;
+            var teenager, haslicense;
+            age=window.prompt("Enter your age: ");
+
+            if (age> 19){
+                teenager=false;
+                haslicense=true;
+            }
+            else if (age< 13){
+                teenager=false;
+                haslicense=false;
+            }
+            else {
+                teenager =true;
+                haslicense= false;
+            }
+            document.write("Is teenager: " +teenager);
+            document.write("Has license? " + haslicense);
+        </script>
+    </body>
+</html>
