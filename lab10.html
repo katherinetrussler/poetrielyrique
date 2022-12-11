@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+    <html>
+    <body>
+    <head>
+        <title>Lab10 - </title>
+        <!-- Bootstrap CSS and JavaScript CDN links -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+        <!-- This allows the program to get the data entered by the user into the form. Do not move this -->
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    </head>
+    <body style="padding-left: 15px; padding-top: 10px;">
+        <h1>Enter 5 Grades (each out of 100) into the following form</h1>
+        <table>
+        <tr><th>GPA Calculator</th></tr>
+        <tr><td>
+            <br>
+            <form id="myForm">
+            <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Grade 1</label>
+            <input type="text" class="form-control" id="a" placeholder="" name="a">
+            </div>
+            <br>
+            <div class="mb-3">
+            <label for="myForm" class="form-label">Grade 2</label>
+            <input type="text" class="form-control" id="b" placeholder="" name="b">
+            </div>
+            <br>
+            <div class="mb-3">
+            <label for="myForm" class="form-label">Grade 3</label>
+            <input type="text" class="form-control" id="c" placeholder="">
+            </div>
+            <br>
+            <div class="mb-3">
+            <label for="myForm" class="form-label">Grade 4</label>
+            <input type="text" class="form-control" id="d" placeholder="" name="d">
+            </div>
+            <br>
+            <div class="mb-3">
+            <label for="myForm" class="form-label">Grade 5</label>
+            <input type="text" class="form-control" id="e" placeholder="" name="e">
+            </div>
+            <br>
+            <br>
+            <br>
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#calculateGPA" onclick="calculateGrade(myForm.a.value,myForm.b.value,myForm.c.value,myForm.d.value,myForm.e.value,true)">Calculate adjusted GPA</button>
+            <button type="button" class="btn btn-secondary" onclick="refillTheForm()">Reset</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#calculateGPA" onclick="calculateGrade(myForm.a.value,myForm.b.value,myForm.c.value,myForm.d.value,myForm.e.value,false)">Calculate GPA</button>
+            </form>
+        </td></tr>
+        </table>
+
+        <!-- Add the modal for displaying the content of the form below -->
+        <div class="modal fade" id="calculateGPA" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 id="grade-title">Grades</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <p id="content"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <br>
+          <br>
+        <script>
+          function refillTheForm(){
+            document.getElementById("myForm").reset();
+          }
+
+
+          function calculateGrade(g1,g2,g3,g4,g5,adjusted){
+            var grades = new Array(g1,g2,g3,g4,g5);
+            var totalgrade = 0;
+            var averagegrade = 0;
+            var lettergrade = "<br>";
+            var i;
+            if(adjusted==true){
+              grades.sort().pop();
+            }
+            
+            for (i = 0; i < grades.length; i++){
+              totalgrade= totalgrade += parseInt(grades[i]);
+            }
+            var averagegrade = totalgrade/grades.length;
+            if (averagegrade >= 90 && averagegrade <= 100){
+              lettergrade = "A+"
+            }
+            else if (averagegrade >= 85 && averagegrade <= 89){
+              lettergrade = "A";
+            }
+            else if (averagegrade >=80 && averagegrade <= 84){
+              lettergrade = "A-"
+            }
+            else if (averagegrade >=76 && averagegrade <=79){
+              lettergrade = "B+"
+            }
+            else if (averagegrade >=72 && averagegrade <=75){
+              lettergrade = "B"
+            }
+            else if (averagegrade >=68 && averagegrade <=71){
+              lettergrade ="B-"
+            }
+            else if (averagegrade >=64 && averagegrade <=67){
+              lettergrade ="C+"
+            }
+            else if (averagegrade >=60 && averagegrade <=63){
+              lettergrade ="C"
+            }
+            else if (averagegrade >=55 && averagegrade <=59){
+              lettergrade ="C-"
+            }
+            else if (averagegrade >=50 && averagegrade <=54){
+              lettergrade ="D"
+            }
+            else if (averagegrade >=0 && averagegrade <=49){
+              lettergrade ="F"
+            }
+            document.getElementById("content").innerHTML= "Your final grade percentage is: " + averagegrade + "<br>"+ "Based on this overall score, your letter grade will be: "+ lettergrade;
+
+          }
+            
+        </script>
+    </body>
+</html>
