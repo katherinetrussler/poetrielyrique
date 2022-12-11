@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <title>Lab 07 - COSC 122 Index page for Task 1</title>
+    </head>
+    <body>
+        <h1>Task 1</h1>
+        <script>
+            //Katherine Trussler Student number 32377095
+           var name = window.prompt("Enter your name:");
+           var celebratebirth =window.prompt("Did you have a birthday this year yet:y/n?")
+           var byear = window.prompt("Enter birth year:");
+
+           var d = new Date();
+           var year =d.getFullYear();
+
+           if (celebratebirth=="y") {
+            var age = year -parseInt(byear);
+            document.write("Your name is:" + name + "<br>"
+            + "You had your birthday this year." + "<br>"
+            + "Your age is:" + age + "<br>");
+           }
+           else {
+            var age = year - parseInt(byear)- 1;
+            document.write("Your name is:" + name + "<br>"
+            + "You haven't had your birthday yet this year." + "<br>"
+            + "Your age is: " + age + "<br>");
+           }
+
+           if (age%2 ==0){
+            document.write("Your age is an even number.");
+           }
+           else {
+            document.write("Your age is an odd number.");
+           }
+
+        </script>
+    </body>
+</html>
+//<html>
+    <head>
+        <title>Lab07 - COSC 122 Index page for Task 2</title>
+    </head>
+    <body style="background-color: white;">
+        <h1>Task 2</h1>
+        <h2>
+            <script>
+                // Katherine Trussler Student number 32377095
+                var i;
+                for(i=1; i<=10; i++) 
+                {if(i%2 == 0) {
+                document.write(i + " even" + "<br>");    
+                }
+                else {
+                document.write(i + " odd" + "<br>");}    
+                }
+                
+            </script>
+        </h2>
+    </body>
+</html>
+<head>
+    <title>Lab07 - COSC 122 Index page for Task 3</title>
+</head>
+<body>
+    <h1>Task 3</h1>
+    <p>The computer will pick a number between 1 and 100 (inclusive).  Your job is to guess that number in as few guesses as possible.  If you take more than 6 guesses, the computer wins!</p>
+    <h2>
+        <script type="text/javascript">
+            // Katherine Trussler, Student #:32377095
+            var myArray = new Array(6);
+            var player = 0;
+
+            var computerNumber = getRandom(1,100);
+            var guess= window.prompt("Enter your guess");
+
+            function getRandom(minVal, maxVal) {	
+                var numberRangeSize = maxVal - minVal;
+                return Math.floor(Math.random()*numberRangeSize)+minVal;
+            }
+
+            for (var i =0; i<6; i++)
+            {var guess= window.prompt("Enter your guess");
+            myArray [i] = guess;
+            if (guess <computerNumber) {
+            window.alert("Your guess was too low");
+            }
+            if (guess >computerNumber) { 
+            window.alert("Your guess was too high");
+            }
+            if (guess ==computerNumber) { 
+            document.write("You win by guessing correctly! My number was: " +computerNumber);
+                var player= "1";
+                break;
+            }
+            }
+            //I can't quite figure out how to get it to cicle back. But i have class through all the remaining tutorials so I'm out of luck.
+            if (player =="0") {
+                document.write("You've lost today, try again");
+            }
