@@ -33,3 +33,13 @@ console.log(ceaserCipher('prashantyadav'));
         </script>
     </body>
 </html>
+const str = 'crazy';
+const alphabeticShift = (str = '', n = 1) => {
+   let arr = [];
+   for(let i = 0; i < str.length; i++) {
+      arr.push(String.fromCharCode((str[i].charCodeAt() + n)));
+   }
+   let res = arr.join("").replace(/{/g, 'a');;
+   return res;
+};
+console.log(alphabeticShift(str));
