@@ -1,0 +1,31 @@
+<html>
+<body>
+<script>
+    // Let's create an array that will store 50 items inside
+    var arraylist = new Array(50);
+    // Create x variable which will be a first value of multiplication (e.g., x * 1, 2, 3, 4, 5, 6, 7, 8, 9, 10) where numbers except "x" are y values.
+    var x = 1;
+    // create a counter for arraylist, so we will be able to put results of x and y multiplication in the proper place in arraylist
+    var arrCounter = 0;
+    // Run the while loop until x is less or equal to 10
+    while (x <= 10) {
+      // remember, x * y
+      var y = 1;
+      // if x is odd number, we will skip it and add 1 to x, so we will not be stuck in the infinite loop
+      if (x % 2 != 0) {
+        x++; // or x += 1 or x = x + 1
+        continue; // This is basically stating that we will skip other statements below
+      }
+      // If x is even number, we will run the while loop until y is less or equal to 10
+      while (y <= 10) { 
+        // Remember arrCounter we declared before? that's where we use it
+        arraylist[arrCounter] = x * y; // keeping multiplication the same
+        y++; // add 1 to y so we can multiply x with next number
+        arrCounter += 1; // we added x * y result to arraylist, so we need to add 1 to arrCounter so we can put next result in the next place in arraylist
+      }
+      x++; // add 1 to x so we can multiply next number with y
+    }
+    document.write(arraylist);
+  </script>
+  </body>
+  </html>

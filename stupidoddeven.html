@@ -1,31 +1,29 @@
 <html>
     <body>
-        <script>
-            var number;
-            var n = window.prompt("Please enter a postive number");
-            n = parseInt(n);
-            var yes= Number.isInteger(n);
-              
-            if(yes== true){
-              for (i=0; i<=n; i++){
-                document.write(i+number+"<br>");
-                if (i%2==0){
-                  number="odd";
+      <script>
+        var N = window.prompt("Enter a positive integer: ");
+        var sum = 0;
+        if (!isNaN(N)) {
+
+            if (N > 0){
+                for (var i = 1; i <= N; i++) {
+                    document.write(i);
+                    if (i % 2 == 0) {
+                        document.write(" Even");
+                    } else {
+                        document.write(" Odd");
+                    }
+                    document.write("<br>");
+                    sum += i;
                 }
-                if (i%2!=0) {
-                  number="even";
-                }
-                //I'm aware normally i%2==0 should be a positive number but it's not running like that so I flippede them so it would display correctly. I have 5 minutes left, not going to get it in time
-              }
-              }
-              if(yes==false){
-        window.alert("Your input isn't a positive integer, please try again");
+                document.write("The sum is: " + sum);
             }
-            if(n<0){
-              document.alert("Wrong Value! Please enter a positive integer. Program terminated.")
+            else if (N < 0) {
+                document.write("Wrong value! Please enter a positive integer. Program terminated.");
             }
-            
-            </script>
-            //the sum was not calculated
+        } else if (isNaN(N)) {
+            document.write("Wrong type! Please enter a positive integer. Program terminated.");
+        }
+    </script>
     </body>
 </html>
