@@ -1,45 +1,34 @@
 <html>
     <body>
         <script>
-            let ceaserCipher = (str) => {
-  //Deciphered reference letters
-  let decoded = {
-    a: 'n', b: 'o', c: 'p',
-    d: 'q', e: 'r', f: 's',
-    g: 't', h: 'u', i: 'v',
-    j: 'w', k: 'x', l: 'y',
-    m: 'z', n: 'a', o: 'b',
-    p: 'c', q: 'd', r: 'e',
-    s: 'f', t: 'g', u: 'h',
-    v: 'i', w: 'j', x: 'k',
-    y: 'l', z: 'm'    
-  }
-  
-  //convert the string to lowercase
-  str = str.toLowerCase();
-  
-  //decipher the code
-  let decipher ="";
-  for(let i = 0 ; i < str.length; i++){
-    decipher += decoded[str[i]];
-  }
-  
-  //return the output
-  return decipher;
-  console.log(ceaserCipher('attackatonce'));
-console.log(ceaserCipher('prashantyadav'));
-}
+          var answer=window.prompt("Are you encrypting: yes or no?");
 
+          if (answer==yes){
+            alphabet=window.prompt("Enter your text to be encrytped");
+            alphabet=(
+              "a"="n", "b"="o", "c"="p", "d"= "q", "e"="r", "f"="s",
+              "g"="t", "h"="u", "i"="v","j"="w", "k"="x", "l"="y",
+              "m"="z", "n"="a", "o"="b","p"="c", "q"="d", "r"="e",
+              "s"="f", "t"="g", "u"="h", "v"="i", "w"="j", "x"="k",
+              "y"="l", "z"="m");
+            
+            document.write("Your encrpted code is: "+ alphabet);
+          }
+          else if (answer==no){
+            alphabet=window.prompt("Enter your text to be descrpyted")
+            alphabet=(
+              "n"="a", "o"="b", "p"="c", "q"= "d", "r"="e", "s"="f",
+              "t"="g", "u"="h", "v"="i","w"="j", "x"="k", "y"="l",
+              "z"="m", "a"="n", "b"="o","c"="p", "d"="q", "e"="r",
+              "f"="s", "g"="t", "h"="u", "i"="v", "j"="w", "k"="x",
+              "l"="y", "m"="z"); 
+            document.write("Your decrypted message is: " + alphabet);
+          }
+//doesn't run or display windows
         </script>
     </body>
 </html>
-const str = 'crazy';
-const alphabeticShift = (str = '', n = 1) => {
-   let arr = [];
-   for(let i = 0; i < str.length; i++) {
-      arr.push(String.fromCharCode((str[i].charCodeAt() + n)));
-   }
-   let res = arr.join("").replace(/{/g, 'a');;
-   return res;
-};
-console.log(alphabeticShift(str));
+
+
+
+
